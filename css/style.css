@@ -2270,8 +2270,6 @@ textarea.input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 
   .menu-catalog__body {
@@ -2303,7 +2301,7 @@ textarea.input {
   }
 
   .menu-catalog__link {
-    font-size: 1.875rem;
+    font-size: 1.5625rem;
     color: #fff;
   }
 
