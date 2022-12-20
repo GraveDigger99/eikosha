@@ -424,6 +424,10 @@ textarea.input {
   color: #00868A;
 }
 
+.label_font-family {
+  font-family: "Playfair Display";
+}
+
 .subtitle {
   font-family: "Playfair Display";
   font-weight: 600;
@@ -1006,9 +1010,10 @@ textarea.input {
 }
 
 .popular-products__wrapper {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: stretch !important;
+      -ms-flex-align: stretch !important;
+          align-items: stretch !important;
+  height: auto !important;
 }
 
 .popular-products__wrapper:not(:last-child) {
@@ -2412,6 +2417,10 @@ textarea.input {
 }
 
 @media (max-width: 29.99875em) {
+  .label_font-family {
+    font-family: inherit;
+  }
+
   .subtitle_font-family {
     font-family: inherit;
   }
