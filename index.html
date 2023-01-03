@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221220144523">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230103193900">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -169,7 +169,7 @@
 					<div class="catalog-flawor flawor-catalog">
 						<h3 class="flawor-catalog__label label label_font-family">Обрати аромат</h3>
 						<nav class="flawor-catalog__menu menu-catalog">
-							<button hidden class="menu-catalog__icon" type="button">
+							<button data-popup="#popup" hidden class="menu-catalog__icon" type="button">
 								<img src="img/icons/catalog.svg" alt="icon">
 							</button>
 							<div class="menu-catalog__body">
@@ -618,10 +618,11 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__top">
-					<form action="#" class="footer__form form-footer">
+					<form data-dev action="#" class="footer__form form-footer">
 						<h3 class="form-footer__label label label_white label_font-family">Залишити заявку</h3>
-						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Им’я" class="footer__input">
-						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Телефон" class="footer__input">
+						<input required autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Им’я" class="footer__input">
+						<input required autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Телефон" class="footer__input">
+						<button data-popup="#thanks" type="submit" class="button button_background-blue button_color-white">Замовити</button>
 					</form>
 					<div class="footer__content">
 						<h3 class="footer__label label label_white label_font-family">Контакти</h3>
@@ -684,17 +685,28 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__action">
+					<button data-close type="button" class="popup__close">X</button>
+				</div>
+				<div class="popup__buttons">
+					<a href="#" class="popup__button button button_border-blue">для дома</a>
+					<a href="#" class="popup__button button button_border-blue">для машины</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20221220144523"></script>
+	<div id="thanks" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<p class="popup__text">Спасибо! <br> Наш менеджер свяжется с Вами в ближайшее время.</p>
+				<a href="#" class="popup__button button button_border-blue">Готово</a>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230103193900"></script>
 </body>
 
 </html>
